@@ -18,6 +18,7 @@ CREATE TABLE Schools (
     school_name VARCHAR(100),
     location VARCHAR(255),
     capacity INT,
+    comissioning_date DATE
     status ENUM('Active', 'Inactive')
 );
 
@@ -26,6 +27,7 @@ CREATE TABLE Class (
     class_id INT AUTO_INCREMENT PRIMARY KEY,
     class_name VARCHAR(100),
     school_id INT,
+    comissioning_date DATE
     FOREIGN KEY (school_id) REFERENCES Schools(school_id)
 );
 
